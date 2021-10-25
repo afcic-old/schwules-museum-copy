@@ -1,0 +1,55 @@
+@media only screen and (min-width: 900px) {
+  //footer NAVBAR
+  footer {
+    .nav-footer {
+      text-align: $center-align;
+
+      .toggle {
+        background-color: $black-color;
+        border: $noshow;
+        color: $yellow-color;
+        cursor: pointer;
+        font-size: 1rem;
+      }
+
+      .footer-ul {
+        padding: 0;
+        margin: 0;
+        @include flexColumn;
+      }
+
+      .footer-link {
+        list-style-type: $noshow;
+        font-size: 1rem;
+        display: block;
+        width: $max-width;
+        padding: $half-rem;
+        text-align: $left-align;
+      }
+
+      .nodisplay {
+        position: absolute;
+        width: $max-width;
+        height: $half-height;
+        top: $half-height;
+        overflow: hidden;
+        background-color: $black-color;
+        color: $white-color;
+        transition: all 0.2s;
+      }
+      .nodisplay.active {
+        top: 96vh;
+        height: 4vh;
+      }
+
+      .a-link {
+        text-decoration: $noshow;
+        color: $white-color;
+        font-family: $font-regular;
+        &:hover {
+          font-family: $font-bold;
+        }
+      }
+    }
+  }
+}

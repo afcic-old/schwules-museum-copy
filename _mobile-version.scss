@@ -1,0 +1,352 @@
+@media only screen and (max-width: 900px) {
+  // HEADER WITH TITLE AND LANGUAGE CHANGE
+  .header-nav {
+    justify-content: space-between;
+    margin: 0 1vw 0 2vw;
+    padding: 0 1vw 0 0;
+    @include flexRow;
+
+    .museum {
+      clear: both;
+      font-size: 1.7vh;
+      flex: 2;
+
+      #museum_name {
+        color: $red-color;
+        float: left;
+        height: 8vh;
+        width: 15vw;
+      }
+      #museum_address {
+        display: $noshow;
+      }
+    }
+
+    #socials button {
+      display: $noshow;
+    }
+
+    .lang {
+      width: 5vw;
+      padding: 3vw 5vw 0 40vw;
+      #en,
+      #de {
+        color: $red-color;
+        font-size: 2vw;
+        text-decoration: $noshow;
+        &:hover {
+          color: $black-color;
+          font-family: $font-regular;
+        }
+      }
+    }
+
+    //NAVBAR SANDWICH TO DROPDOWN
+    .nav-menu {
+      background-color: $blue-color;
+      position: fixed;
+      left: -100%;
+      top: 4.5rem;
+      width: $max-width;
+      height: 70%;
+      z-index: $zindexMax;
+      @include flexColumn;
+      &.active {
+        left: 0;
+      }
+    }
+
+    .nav-item {
+      margin: 2rem 0 0 0;
+      list-style-type: $noshow;
+      .nav-link {
+        color: $white-color;
+
+        text-decoration: $noshow;
+        font-size: 3vw;
+        &:hover,
+        &:visited,
+        &:active {
+          color: $white-color;
+          text-decoration: underline $green-underline $half-rem;
+        }
+      }
+    }
+
+    .hamburger {
+      cursor: pointer;
+      display: block;
+      padding: 3vw 0 0 30vw;
+      .bar {
+        background-color: $blue-color;
+        display: block;
+        width: 25px;
+        height: 3px;
+        margin: 5px auto;
+        -webkit-transition: all 0.3s ease-in-out;
+        transition: all 0.3s ease-in-out;
+      }
+    }
+  }
+
+  //MAIN SCROLL PART
+
+  .container {
+    display: grid;
+    grid-template-columns: $half-height 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    height: 79vh;
+    overflow: hidden;
+    position: relative;
+    width: $max-width;
+
+    //EXHIBITION SCROLL
+    .exhibition {
+      align-items: $center-align;
+      display: flex;
+      grid-column-start: 1;
+      grid-column-end: 3;
+      grid-row-start: 1;
+      grid-row-end: 1;
+      overflow: hidden;
+      width: $max-width;
+
+      .first-magenta {
+        background-color: $magenta-color;
+        color: $white-color;
+        height: $span-height;
+      }
+      .inverse-magenta {
+        background-color: $white-color;
+        color: $magenta-color;
+        height: $span-height;
+      }
+      .scroll-text {
+        white-space: nowrap;
+        animation: marquee 60s linear infinite;
+        animation-delay: -30s;
+        span {
+          display: inline-block;
+          font-size: 20vh;
+          padding: 2vw;
+        }
+        @keyframes marquee {
+          0% {
+            transform: translateX(100%);
+          }
+          100% {
+            transform: translateX(-100%);
+          }
+        }
+      }
+      .scroll-text2 {
+        animation: animate 60s linear infinite;
+        animation-delay: 0s;
+        white-space: nowrap;
+        span {
+          display: inline-block;
+          font-size: 20vh;
+          padding: 2vw;
+        }
+        @keyframes animate {
+          0% {
+            transform: translateX(0%);
+          }
+          100% {
+            transform: translateX(-200%);
+          }
+        }
+      }
+    }
+    //EVENTS
+    .event {
+      align-items: $center-align;
+      display: flex;
+      width: $max-width;
+      grid-column-start: 1;
+      grid-column-end: 3;
+      grid-row-start: 2;
+      grid-row-end: 2;
+      overflow: hidden;
+
+      .first-red {
+        background-color: $red-color;
+        color: $white-color;
+        height: $span-height;
+      }
+
+      .inverse-red {
+        background-color: $white-color;
+        color: $red-color;
+        height: $span-height;
+      }
+      .scroll-text {
+        white-space: nowrap;
+        animation: marquee 60s linear infinite;
+        animation-delay: -30s;
+        animation-direction: reverse;
+        span {
+          display: inline-block;
+          font-size: 20vh;
+          padding: 2vw;
+        }
+        @keyframes marquee {
+          0% {
+            transform: translateX(100%);
+          }
+          100% {
+            transform: translateX(-100%);
+          }
+        }
+      }
+      .scroll-text2 {
+        animation: animate 60s linear infinite;
+        animation-delay: 0s;
+        white-space: nowrap;
+        animation-direction: reverse;
+        span {
+          display: inline-block;
+          font-size: 20vh;
+          padding: 2vw;
+        }
+        @keyframes animate {
+          0% {
+            transform: translateX(0%);
+          }
+          100% {
+            transform: translateX(-200%);
+          }
+        }
+      }
+    }
+
+    //library
+    .library {
+      align-items: $center-align;
+      display: flex;
+      grid-column-start: 1;
+      grid-column-end: 3;
+      grid-row-start: 3;
+      grid-row-end: 3;
+      overflow: hidden;
+      width: 100vw;
+
+      .first-cyan {
+        background-color: $cyan-color;
+        color: $white-color;
+        height: $span-height;
+      }
+
+      .inverse-cyan {
+        background-color: $white-color;
+        color: $cyan-color;
+        height: $span-height;
+      }
+      .scroll-text {
+        animation: marquee 60s linear infinite;
+        animation-delay: -30s;
+        white-space: nowrap;
+        span {
+          display: inline-block;
+          font-size: 20vh;
+          padding: 2vw;
+        }
+        @keyframes marquee {
+          0% {
+            transform: translateX(100%);
+          }
+          100% {
+            transform: translateX(-100%);
+          }
+        }
+      }
+      .scroll-text2 {
+        animation: animate 60s linear infinite;
+        animation-delay: 0s;
+        white-space: nowrap;
+        span {
+          display: inline-block;
+          font-size: 20vh;
+          padding: 2vw;
+        }
+        @keyframes animate {
+          0% {
+            transform: translateX(0%);
+          }
+          100% {
+            transform: translateX(-200%);
+          }
+        }
+      }
+    }
+    .info {
+      font-size: 2.5vw;
+      grid-column-start: 1;
+      grid-column-end: 3;
+      grid-row-start: 4;
+      grid-row-end: 4;
+      text-align: $center-align;
+      width: $max-width;
+      a {
+        color: $black-color;
+      }
+    }
+    .exhibition-overlay,
+    .event-overlay,
+    .library-overlay {
+      display: none;
+    }
+  }
+
+  //footer NAVBAR
+  footer {
+    .nav-footer {
+      text-align: $center-align;
+
+      .toggle {
+        background-color: $black-color;
+        border: $noshow;
+        color: $yellow-color;
+        cursor: pointer;
+        font-size: 1.3rem;
+        height: 2rem;
+        outline: $noshow;
+      }
+
+      .footer-ul {
+        @include flexColumn;
+        padding: 1vw 0 0 0;
+      }
+
+      .footer-link {
+        list-style-type: $noshow;
+        font-size: 1.5rem;
+        display: block;
+        width: $max-width;
+        padding: $half-rem 0 0 3rem;
+        text-align: $left-align;
+      }
+
+      .nodisplay {
+        position: absolute;
+        width: $max-width;
+        height: $half-height;
+        top: $half-height;
+        overflow: hidden;
+        background-color: $black-color;
+        color: $white-color;
+        transition: all 0.2s;
+      }
+      .nodisplay.active {
+        top: 95vh;
+        height: 5vh;
+      }
+
+      .a-link {
+        text-decoration: $noshow;
+        color: $white-color;
+        font-family: $font-regular;
+      }
+    }
+  }
+}

@@ -1,0 +1,41 @@
+// fonts
+$font-regular: "Pano", sans-serif;
+$font-bold: "Pano Bold", sans-serif;
+
+//font size
+
+// colors
+$black-color: black;
+$white-color: white;
+$red-color: red;
+$magenta-color: magenta;
+$blue-color: blue;
+$cyan-color: cyan;
+$green-underline: rgb(119, 243, 48);
+$yellow-color: yellow;
+
+//width
+$max-width: 100vw;
+$half-width: 50vw;
+
+//height
+$half-height: 50vh;
+$span-height: 28vh;
+
+//z-index
+$zindexMax: 1000;
+$zindexExhibiton: 10;
+$zindexEvent: 20;
+$zindexLibrary: 30;
+
+//align
+$left-align: left;
+$right-align: right;
+$center-align: center;
+
+//display + text-decoration + list-style-type + border: NONE
+$noshow: none;
+
+// padding + margin sizes
+$half-rem: 0.5rem;
+$quarter-rem: 0.25rem;

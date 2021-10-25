@@ -1,0 +1,91 @@
+@media only screen and (min-width: 900px) {
+  //HEADER title + address + socials + language¸
+  .header-nav {
+    height: 15vh;
+    padding: 0 2vw 1vw 2vw;
+    overflow: hidden;
+    width: $max-width;
+    @include flexColumn;
+
+    .title {
+      height: 8vh;
+      @include flexRow;
+
+      .museum {
+        clear: both;
+        font-size: 1.9vh;
+        flex: 2;
+
+        #museum_name {
+          color: $red-color;
+          float: left;
+          font-size: 2.3vw;
+          height: 10vh;
+          margin: 0.5vw 2rem 0 0;
+          width: 15vw;
+        }
+        #museum_address {
+          color: $red-color;
+          float: left;
+          font-size: 2.3vw;
+          height: 10vh;
+          padding: 0 2vw 0 0;
+          margin: 0.5vw 2vw 0 6vw;
+          width: 30vw;
+        }
+      }
+      #socials {
+        .socials-btn {
+          background: transparent;
+          border: transparent;
+          cursor: pointer;
+          font-size: 4vh;
+          padding: $half-rem;
+          &-a:hover,
+          :active,
+          :visited {
+            color: $black-color;
+          }
+        }
+      }
+      .lang {
+        margin: $half-rem 3rem 0 0;
+        width: 5vw;
+        #en,
+        #de {
+          color: $red-color;
+          font-size: 1.8vw;
+          text-decoration: $noshow;
+          &:hover {
+            color: $black-color;
+          }
+        }
+      }
+    }
+
+    // navbar
+    nav {
+      float: inline-start;
+      padding: 2vw 0 0vw 0;
+      font-size: 1vw;
+      height: 6vh;
+      ul {
+        padding: 0;
+        margin: 0;
+        li {
+          display: inline-block;
+          padding: 0 1vw 0 0;
+          .nav-link {
+            color: $blue-color;
+            text-decoration: $noshow;
+            &:hover,
+            &:visited {
+              color: $blue-color;
+              text-decoration: underline $green-underline $half-rem;
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,282 @@
+//MAIN PART OF THE WEBSITE
+@media only screen and (min-width: 901px) {
+  .container {
+    position: relative;
+    display: grid;
+    grid-template-columns: $half-width 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    height: 84vh;
+    width: $max-width;
+    overflow: hidden;
+
+    //EXHIBITION SCROLL
+    .exhibition {
+      align-items: center;
+      cursor: pointer;
+      display: flex;
+      width: $max-width;
+      @include exhibitionGrid;
+    }
+    .first-magenta {
+      background-color: $magenta-color;
+      color: $white-color;
+      height: $span-height;
+    }
+
+    .inverse-magenta {
+      background-color: $white-color;
+      color: $magenta-color;
+      height: $span-height;
+    }
+
+    .scroll-text {
+      white-space: nowrap;
+      animation: animate 60s linear infinite;
+      animation-delay: -30s;
+      span {
+        display: inline;
+        font-size: 20vh;
+        padding: 2vw;
+      }
+      @keyframes animate {
+        0% {
+          transform: translateX(100%);
+        }
+        100% {
+          transform: translateX(-100%);
+        }
+      }
+    }
+
+    .scroll-text2 {
+      white-space: nowrap;
+      animation: marquee 60s linear infinite;
+      animation-delay: 0s;
+
+      span {
+        display: inline;
+        font-size: 20vh;
+        padding: 2vw;
+      }
+      @keyframes marquee {
+        0% {
+          transform: translateX(0%);
+        }
+        100% {
+          transform: translateX(-200%);
+        }
+      }
+    }
+
+    //EVENTS
+    .event {
+      cursor: pointer;
+      display: flex;
+      align-items: $center-align;
+      float: right;
+      width: $half-width;
+      @include eventGrid;
+      .first-red {
+        background-color: $red-color;
+        color: $white-color;
+        height: $span-height;
+      }
+
+      .inverse-red {
+        background-color: $white-color;
+        color: $red-color;
+        height: $span-height;
+      }
+      .scroll-text {
+        white-space: nowrap;
+        animation: marquee 60s linear infinite;
+        animation-delay: -30s;
+        animation-direction: reverse;
+
+        span {
+          display: inline-block;
+          font-size: 20vh;
+          padding: 2vw;
+        }
+
+        @keyframes marquee {
+          0% {
+            transform: translateX(100%);
+          }
+          100% {
+            transform: translateX(-100%);
+          }
+        }
+      }
+      .scroll-text2 {
+        white-space: nowrap;
+        animation: animate 60s linear infinite;
+        animation-delay: 0s;
+        animation-direction: reverse;
+
+        span {
+          display: inline-block;
+          font-size: 20vh;
+          padding: 2vw;
+        }
+        @keyframes animate {
+          0% {
+            transform: translateX(0%);
+          }
+          100% {
+            transform: translateX(-200%);
+          }
+        }
+      }
+    }
+
+    //library
+    .library {
+      cursor: pointer;
+      display: flex;
+      align-items: $center-align;
+      float: right;
+      width: $half-width;
+      @include libraryGrid;
+    }
+
+    .first-cyan {
+      background-color: $cyan-color;
+      color: $white-color;
+      height: $span-height;
+    }
+
+    .inverse-cyan {
+      background-color: $white-color;
+      color: $cyan-color;
+      height: $span-height;
+    }
+    .scroll-text {
+      white-space: nowrap;
+      animation: marquee 60s linear infinite;
+      animation-delay: -30s;
+      span {
+        display: inline-block;
+        font-size: 20vh;
+        padding: 2vw;
+      }
+      @keyframes marquee {
+        0% {
+          transform: translateX(100%);
+        }
+        100% {
+          transform: translateX(-100%);
+        }
+      }
+    }
+    .scroll-text2 {
+      white-space: nowrap;
+      animation: animate 60s linear infinite;
+      animation-delay: 0s;
+      span {
+        display: inline-block;
+        font-size: 20vh;
+        padding: 2vw;
+      }
+      @keyframes animate {
+        0% {
+          transform: translateX(0%);
+        }
+        100% {
+          transform: translateX(-200%);
+        }
+      }
+    }
+
+    .info {
+      float: left;
+      font-size: 1.3vw;
+      padding: 1rem 0 0 1rem;
+      width: $half-width;
+      @include infoGrid;
+    }
+
+    //OVERLAY SECTION
+    .exhibition-overlay {
+      align-items: $center-align;
+      background-color: $magenta-color;
+      display: flex;
+      right: -100%;
+      transition: all 0.2s;
+      position: absolute;
+      width: $max-width;
+      z-index: $zindexExhibiton;
+      @include exhibitionGrid;
+
+      .box-one {
+        color: $white-color;
+        background-color: $magenta-color;
+        height: 26vh;
+        margin: $half-rem 0 $half-rem $half-rem;
+        padding: $half-rem;
+        width: 40%;
+        &:hover {
+          background-color: $white-color;
+          color: $magenta-color;
+        }
+      }
+    }
+
+    .event-overlay {
+      background-color: $red-color;
+      display: flex;
+      align-items: $center-align;
+      float: right;
+      width: $half-width;
+      right: -100%;
+      transition: 0.2s;
+      position: absolute;
+      z-index: $zindexEvent;
+      @include eventGridOverlay;
+    }
+
+    .grid-container {
+      display: grid;
+      grid-template-columns: 22vw 22vw;
+      grid-template-rows: $span-height $span-height;
+      padding: $quarter-rem;
+    }
+    .box-two {
+      background-color: $red-color;
+      color: $white-color;
+      margin: $quarter-rem;
+      padding: $half-rem;
+    }
+    .box-two:hover {
+      background-color: $white-color;
+      color: $red-color;
+    }
+
+    .library-overlay {
+      background-color: $cyan-color;
+      display: flex;
+      align-items: $center-align;
+      float: right;
+      width: $half-width;
+      right: -100%;
+      height: 53vh;
+      transition: 0.2s;
+      position: absolute;
+      z-index: $zindexLibrary;
+      @include libraryGridOverlay;
+    }
+
+    .box-three {
+      background-color: $cyan-color;
+      color: $white-color;
+      width: 20vw;
+      height: 25.5vh * 2;
+      margin: $half-rem;
+      padding: $half-rem;
+      &:hover {
+        background-color: $white-color;
+        color: $cyan-color;
+      }
+    }
+  }
+}

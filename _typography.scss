@@ -1,7 +1,9 @@
 @font-face {
   font-family: "Pano";
   src: url("./fonts/Pano\ Trial\ Regular.woff2") format("woff2"),
-    url("./fonts/Pano\ Trial\ Regular.woff") format("woff");
+    url("./fonts/Pano\ Trial\ Regular.woff") format("woff"),
+    url("./fonts/Pano\ Trial\ Regular.svg") format("svg"),
+    url("./fonts/Pano\ Trial\ Regular.otf") format("otf");
   font-weight: 400;
   font-style: normal;
   font-stretch: extra-expanded;
@@ -10,7 +12,10 @@
 @font-face {
   font-family: "Pano Bold";
   src: url("./fonts/Pano\ Trial\ Bold.woff2") format("woff2"),
-    url("./fonts/Pano\ Trial\ Bold.woff") format("woff");
+    url("./fonts/Pano\ Trial\ Bold\ Italic.woff") format("woff"),
+    url("./fonts/Pano\ Trial\ Bold.svg") format("svg"),
+    url("./fonts/Pano\ Trial\ Bold.otf") format("otf");
+
   font-weight: 700;
   font-style: normal;
   font-stretch: extra-expanded;
